@@ -1,0 +1,46 @@
+<div class="boxes"><br />
+  <p>*Boxes*</p>
+  <% for i in (1..22) %>
+    <div class="<%= $box_status[i-1] %>">
+      <form action="/box/<%= i %>" method="post" id="edit">
+        <input type="hidden" name="_method" value="put" />
+        <% if $box_status[i-1] == "opened" || $box_status[i-1] == "kept" %>
+          <input type="submit" value="<%= i %>" disabled="disabled" />
+        <% else %>
+          <% @selectedbox = i %>
+          <input type="submit" value="<%= i %>" onclick= "alert('<%= displayselectedboxvalue %>');" />
+        <% end %>
+      </form>
+    </div>
+  <% end %>
+</div>
+
+<div class="amounts">
+  <p>*Amounts*</p>
+  <% $values.each_index do |i| %>
+    <form action="/amount/<%= i %>" method="post" id="edit">
+      <input type="hidden" name="_method" value="put" />
+      <% if i.between?(0,10) %>
+        <% if $value_to_remove_index[i] != 1 %>
+          <div class="amounts_col">
+              <label for="amount"><%= $values[i] %></label>
+          </div>
+        <% else %>
+          <div class="amounts_col_remove">
+              <label for="amount"><%= $values[i] %></label>
+          </div>
+        <% end %>
+      <% elsif i.between?(11,21) %>
+        <% if $value_to_remove_index[i] != 1 %>
+          <div class="amounts_col">
+              <label for="amount"><%= $values[i] %></label>
+          </div>
+        <% else %>
+          <div class="amounts_col_remove">
+              <label for="amount"><%= $values[i] %></label>
+          </div>
+        <% end %>
+      <% end %>
+    </form>
+  <% end%>
+</div>

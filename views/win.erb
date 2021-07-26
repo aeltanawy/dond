@@ -1,0 +1,16 @@
+<br /><br /><br />
+<div class="win">
+  <br /><h2>You win ...</h2><br />
+  <form action="/win" method="post" style="background-color: rgb(242, 202, 28);">
+    <input type="hidden" name="_method" value="put" /><br />
+    <% if $deal == 0 %>
+      <% value = getchosenboxvalue %>
+      <%= "Chosen box: [#{$chosenbox}] of value: #{value}" %>
+    <% else %>
+      <%= "Banker offer of value: #{$offer}" %>
+    <% end %>
+    <br /><br />
+    <button type="button" onclick="location.href='/restart'">Play Again</button>
+    <br /><br />
+  </form>
+</div>

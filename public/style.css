@@ -1,0 +1,153 @@
+/* Using WAD practicals templates and www.3schools.com/css */
+
+html {
+  box-sizing: border-box;
+}
+header {
+  height: auto;
+  text-align: center;
+}
+div.menubar {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16pt;
+}
+a {
+  display: inline-block;
+  padding: 14px 30px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(117, 50, 43);
+}
+/* change navbar titles background and font color on hovering */
+a:hover {
+  background: rgb(211, 213, 209);
+  color: black;
+}
+body {
+  font-family: Arial;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+div.analysis_bar {
+  float: left;
+  width: 15%;
+  font-size: 18pt;
+}
+div.main_container {
+  float: left;
+  width: 74%;
+  padding-right: 5%;
+  padding-left: 5%;
+  text-align: center;
+  background-color: white;
+}
+div.boxes {
+  width: 70%;
+  float: left;
+  position: relative;
+  font-size: 21pt;
+  font-weight: bold;
+}
+div.offer, div.win {
+  position: relative;
+  font-size: 24pt;
+  font-weight: bold;
+  width: 50%;
+  float: left;
+  border: solid;
+}
+button {
+  font-size: 24pt;
+  font-weight: bold;
+  cursor: pointer;
+}
+div.closed {
+  width: 85px;
+  height: 60px;
+  float: left;
+  position: relative;
+  background-color: rgb(80, 148, 219);
+  margin: 15px;
+  padding-top: 15px;
+}
+div.closed:hover{
+  background-color: rgb(242, 202, 28);
+}
+div.opened {
+  width: 85px;
+  height: 60px;
+  float: left;
+  position: relative;
+  background-color: grey;
+  margin: 15px;
+  padding-top: 15px;
+}
+div.kept {
+  width: 85px;
+  height: 60px;
+  float: left;
+  position: relative;
+  background-color: rgb(219, 125, 65);
+  margin: 15px;
+  padding-top: 15px;
+}
+div.amounts {
+  width: 30%;
+  float: right;
+  position: relative;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+div.analysis_status {
+  background-color: rgb(133, 227, 104);
+  text-align: center;
+  font-weight: bold;
+}
+div.analysis_text {
+  color: rgb(50, 159, 16);
+  font-weight: bold;
+}
+div.choose_box {
+  width: 300px;
+  float: left;
+  background-color: rgb(80, 148, 219);
+}
+div.amounts_col label {
+  width: 45%;
+  position: relative;
+  float: left;
+  background-color: rgb(242, 202, 28);
+  margin: 5px;
+  font-size: 16pt;
+}
+div.amounts_col_remove label {
+  width: 45%;
+  position: relative;
+  float: left;
+  background-color: white;
+  color: white;
+  margin: 5px;
+  font-size: 16pt;
+}
+input {
+  font-size: 20pt;
+  background-color: inherit;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+/*input:hover {
+  color: rgb(102, 99, 99);
+}*/
+footer {
+  width: 100%;
+  position: relative;
+  float: left;
+}
+footer p {
+}
